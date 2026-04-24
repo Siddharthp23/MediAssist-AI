@@ -8,3 +8,10 @@ router = APIRouter()
 def summary(req: HealthcareRequest):
     result = generate_summary(req.input_text)
     return {"summary": result}
+
+@router.get("/health")
+def health_check():
+    return {
+        "status": "ok",
+        "message": "MediAssist AI backend is running"
+    }
