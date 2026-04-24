@@ -9,7 +9,7 @@ def summary(req: HealthcareRequest):
     result = generate_summary(req.input_text)
     return {"summary": result}
 
-@router.get("/health", methods=["GET", "HEAD"])
+@router.head("/health")
 def health_check():
     return {
         "status": "ok",
