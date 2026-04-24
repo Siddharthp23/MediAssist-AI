@@ -1,4 +1,4 @@
-const BASE_URL = "http://backend:8000";
+const BASE_URL = import.meta.env.VITE_API_URL;;
 
 export const generateSummary = async (inputText) => {
   return fetch(`${BASE_URL}/generate-summary`, {
